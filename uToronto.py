@@ -24,7 +24,7 @@ def ut(ent1, var2):
     win = Tk()
     win.geometry("600x200")
     
-    if x in range(0, 100):
+    if x > 0 and x < 100:
         message = Label(win, text = "You have a " + str(round(100*prob, 1)) + "%" + " chance of getting an offer", font = "Bahnschrift 11")
         message.place(x = '50', y = '75')
     else:
