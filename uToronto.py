@@ -1,7 +1,6 @@
 #importing interface and math libraries
 from tkinter import *
 from math import *
-import numpy as np
 
 #toronto probability function
 def ut(ent1, var2):
