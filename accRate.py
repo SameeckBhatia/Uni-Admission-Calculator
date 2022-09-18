@@ -23,7 +23,7 @@ Label(win, text = "Select desired program", font = "Bahnschrift 11").place(x = '
 
 var2 = StringVar()
 var2.set("<program>")
-opt2 = ["Arts", "Engineering", "Science"]
+opt2 = ["Arts", "Commerce (Toronto)", "Engineering", "Mathematics (Waterloo)", "Science"]
 
 drop2 = OptionMenu(win, var2, *opt2)
 drop2.place(x = '50', y = '250')
