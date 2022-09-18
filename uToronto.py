@@ -1,10 +1,11 @@
 #importing interface and math libraries
 from tkinter import *
 from math import *
+import numpy as np
 
 #toronto probability function
 def ut(ent1, var2):
-    prog = ["Arts", "Engineering", "Science"]
+    prog = ["Arts", "Commerce (Toronto)", "Engineering", "Science"]
     
     x = float(ent1.get())
 
@@ -12,9 +13,12 @@ def ut(ent1, var2):
         mu = 85
         sig = 6.5
     elif var2.get() == prog[1]:
+        mu = 88
+        sig = 3
+    elif var2.get() == prog[2]:
         mu = 90
         sig = 5.5
-    elif var2.get() == prog[2]:
+    elif var2.get() == prog[3]:
         mu = 88
         sig = 6.5
 
