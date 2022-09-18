@@ -4,7 +4,7 @@ from math import *
 
 #waterloo probability function
 def uw(ent1, var2):
-    prog = ["Arts", "Engineering", "Science"]
+    prog = ["Arts", "Engineering", "Mathematics (Waterloo)", "Science"]
 
     x = float(ent1.get())
 
@@ -13,8 +13,11 @@ def uw(ent1, var2):
         sig = 5
     elif var2.get() == prog[1]:
         mu = 90
-        sig = 4.5
+        sig = 4
     elif var2.get() == prog[2]:
+        mu = 91
+        sig = 4
+    elif var2.get() == prog[3]:
         mu = 88
         sig = 5
 
