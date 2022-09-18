@@ -1,5 +1,5 @@
 #importing libraries and files
-from uWaterloo import uw; from uToronto import ut
+from uWaterloo import uw; from uToronto import ut; from uWestern import uo
 from ctypes import windll
 from tkinter import *
 windll.shcore.SetProcessDpiAwareness(1)
@@ -13,7 +13,7 @@ Label(win, text = "Select desired university", font = "Bahnschrift 11").place(x 
 
 var1 = StringVar()
 var1.set("<university>")
-opt1 = ["Toronto", "Waterloo"]
+opt1 = ["Toronto", "Waterloo", "Western"]
 
 drop1 = OptionMenu(win, var1, *opt1)
 drop1.place(x = '50', y = '100')
@@ -39,6 +39,8 @@ def uni():
         uw(ent1, var2)
     if var1.get() == "Toronto":
         ut(ent1, var2)
+    if var1.get() == "Western":
+        uo(ent1, var2)
 
 #button to run university function
 Button(win, text = "Calculate", command = uni, font = "Bahnschrift 11").place(x = '400', y = '200')
