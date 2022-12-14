@@ -5,21 +5,16 @@ from math import *
 #waterloo probability function
 def uw(ent1, var2):
     prog = ["Arts", "Engineering", "Mathematics (Waterloo)", "Science"]
+    mu_values = [84, 90, 91, 88]
+    sig_values = [5, 4, 4, 5]
 
     x = float(ent1.get())
 
-    if var2.get() == prog[0]:
-        mu = 84
-        sig = 5
-    elif var2.get() == prog[1]:
-        mu = 90
-        sig = 4
-    elif var2.get() == prog[2]:
-        mu = 91
-        sig = 4
-    elif var2.get() == prog[3]:
-        mu = 88
-        sig = 5
+    for i in prog:
+
+        if i == var2.get():
+            mu = mu_values[prog.index(i)]
+            sig = sig_values[prog.index(i)]
 
     prob = 0.5*erf((x-mu)/sig)+0.5
     

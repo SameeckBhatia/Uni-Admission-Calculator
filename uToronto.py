@@ -5,21 +5,16 @@ from math import *
 #toronto probability function
 def ut(ent1, var2):
     prog = ["Arts", "Commerce (Toronto)", "Engineering", "Science"]
-    
+    mu_values = [85, 88, 90, 88]
+    sig_values = [6.5, 3, 5.5, 6.5]
+
     x = float(ent1.get())
 
-    if var2.get() == prog[0]:
-        mu = 85
-        sig = 6.5
-    elif var2.get() == prog[1]:
-        mu = 88
-        sig = 3
-    elif var2.get() == prog[2]:
-        mu = 90
-        sig = 5.5
-    elif var2.get() == prog[3]:
-        mu = 88
-        sig = 6.5
+    for i in prog:
+
+        if i == var2.get():
+            mu = mu_values[prog.index(i)]
+            sig = sig_values[prog.index(i)]
 
     prob = 0.5*erf((x-mu)/sig)+0.5
     
