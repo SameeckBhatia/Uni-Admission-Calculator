@@ -1,5 +1,5 @@
 #importing libraries and files
-from uWaterloo import uw; from uToronto import ut; from uWestern import uo
+from uni_toronto import ut; uni_waterloo import uw; from uni_western import uo
 from ctypes import windll
 from tkinter import *
 windll.shcore.SetProcessDpiAwareness(1)
