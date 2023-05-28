@@ -1,43 +1,47 @@
-#importing libraries and files
-from uni_toronto import ut; uni_waterloo import uw; from uni_western import uo
+# importing libraries and files
+from uni_toronto import ut
+from uni_waterloo import uw
+from uni_western import uo
 from ctypes import windll
 from tkinter import *
+
 windll.shcore.SetProcessDpiAwareness(1)
 
-#interface initialization
+# interface initialization
 win = Tk()
 win.geometry('700x400')
 
-#university options for the dropdown menu
-Label(win, text = "Select desired university", \
-    font = "Bahnschrift 11").place(x = '50', y = '50')
+# university options for the dropdown menu
+Label(win, text="Select desired university", font="Bahnschrift 11").place(
+    x='50', y='50')
 
 var1 = StringVar()
 var1.set("<university>")
 opt1 = ["Toronto", "Waterloo", "Western"]
 
 drop1 = OptionMenu(win, var1, *opt1)
-drop1.place(x = '50', y = '100')
+drop1.place(x='50', y='100')
 
-#university program options for the dropdown menu
-Label(win, text = "Select desired program", \
-    font = "Bahnschrift 11").place(x = '50', y = '200')
+# university program options for the dropdown menu
+Label(win, text="Select desired program", font="Bahnschrift 11").place(x='50',
+                                                                       y='200')
 
 var2 = StringVar()
 var2.set("<program>")
-opt2 = ["Arts", "Commerce (Toronto)", "Engineering", \
-    "Mathematics (Waterloo)", "Science"]
+opt2 = ["Arts", "Commerce (Toronto)", "Engineering", "Mathematics (Waterloo)",
+        "Science"]
 
 drop2 = OptionMenu(win, var2, *opt2)
-drop2.place(x = '50', y = '250')
+drop2.place(x='50', y='250')
 
-#text box to collect input and for user to enter average
-Label(win, text = "Enter top 6 average", \
-    font = "Bahnschrift 11").place(x = '400', y = '50')
+# text box to collect input and for user to enter average
+Label(win, text="Enter top 6 average", font="Bahnschrift 11").place(x='400',
+                                                                    y='50')
 ent1 = Entry(win)
-ent1.place(x = '400', y = '100')
+ent1.place(x='400', y='100')
 
-#university function
+
+# university function
 def uni():
     if var1.get() == "Waterloo":
         uw(ent1, var2)
@@ -46,8 +50,9 @@ def uni():
     if var1.get() == "Western":
         uo(ent1, var2)
 
-#button to run university function
-Button(win, text = "Calculate", command = uni, \
-    font = "Bahnschrift 11").place(x = '400', y = '200')
+
+# button to run university function
+Button(win, text="Calculate", command=uni, font="Bahnschrift 11").place(x='400',
+                                                                        y='200')
 
 win.mainloop()
